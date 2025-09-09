@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Controls Demo with Explanations</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 40px;
+    color: #444;
+  }
+
+  .description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+  }
+
+  form, table, .tabs, select, input, button {
+    margin-top: 10px;
+  }
+
+  label {
+    display: block;
+    margin: 5px 0;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    padding: 6px 10px;
+    margin: 5px 0;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    padding: 8px 12px;
+    margin: 5px 5px 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .tabs button {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  .tabs button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 10px;
+    border-top: none;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>UI Controls Demo with Explanations</h1>
+
+<h2>1. Radio Buttons</h2>
+<p class="description">Radio buttons дозволяє один (і тільки один) варіант із групи.</p>
+<form>
+  <label><input type="radio" name="gender" value="male"> Male</label>
+  <label><input type="radio" name="gender" value="female"> Female</label>
+  <label><input type="radio" name="gender" value="other"> Other</label>
+</form>
+
+<h2>2. Checkboxes</h2>
+<p class="description">Checkboxes дозволяють обрати одну, декілька, усі або жодну з опцій.</p>
+<form>
+  <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+  <label><input type="checkbox" name="hobby" value="music"> Music</label>
+  <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+</form>
+
+<h2>3. Text Inputs</h2>
+<p class="description">Text inputs дозволяють вводити невелику кількість тексту (один рядок), до прикладу, в формах (email, пароль і т.д.).</p>
+<input type="text" placeholder="Enter your name">
+<input type="email" placeholder="Enter your email">
+<input type="password" placeholder="Enter password">
+
+<h2>4. Tabs</h2>
+<p class="description">Tabs дозволяють мати доступ до різного контенту без залишання сторінки.</p>
+<div class="tabs">
+  <button class="tab-button active" onclick="openTab(event, 'tab1')">Tab 1</button>
+  <button class="tab-button" onclick="openTab(event, 'tab2')">Tab 2</button>
+  <button class="tab-button" onclick="openTab(event, 'tab3')">Tab 3</button>
+</div>
+<div id="tab1" class="tab-content active">Content for Tab 1</div>
+<div id="tab2" class="tab-content">Content for Tab 2</div>
+<div id="tab3" class="tab-content">Content for Tab 3</div>
+
+<h2>5. Buttons</h2>
+<p class="description">Buttons дозволяють виконувати дії на сторінці, запускаючи onclick() подію та присутні в ній скрипти.</p>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<button onclick="alert('Hello!')">Click Me</button>
+
+<h2>6. Text Labels</h2>
+<p class="description">Labels надають опис для блоків тексту та інших елементів, автоматично переходять на новий рядок.</p>
+<label>This is a label</label>
+
+<label for="username"><b>Username:</b></label>
+<input id="username" type="text">
+
+<label for="agree"><i>I agree to the terms</i></label>
+<input id="agree" type="checkbox">
+
+<h2>7. Links</h2>
+<p class="description">Links дозволяють переходити на інші сторінки сайту, інші сайти та конкретні місця на сторінці. Текст описує посилання.</p>
+<a href="https://example.com">Visit Example</a><br>
+<a href="mailto:test@example.com">Send Email</a><br>
+<a href="#section2">Go to Section 2</a>
+
+<h2>8. Tooltips</h2>
+<p class="description">Tooltips показують додаткову інформацію, якщо навести на них курсором.</p>
+<button title="Click to submit">Submit</button>
+<p title="This is additional info">Hover over this text</p>
+<img src="https://journocode.com/assets/static/e7c0862adcf270d9d81b04923a25ca4f1d1166d423e63db44da87b315c2c39e5.250a89b.4125c9b64f4a4197585bfd91d42db7b9.png" title="Image description" alt="Sample" height="100px">
+
+<h2>9. Dropdown List</h2>
+<p class="description">Dropdown lists дозволяють обрати один чи декілька елементів списку (може розгортатися при натисканні).</p>
+<select>
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+</select>
+
+<select multiple>
+  <option>Red</option>
+  <option>Blue</option>
+  <option>Green</option>
+  <option>Yellow</option>
+  <option>Black</option>
+  <option>White</option>
+</select>
+
+<h2>10. Data Grid (Table)</h2>
+<p class="description">Data grids (tables) показує структуровану інформацію в табличному вигляді (тепер менше використовується).</p>
+<table>
+  <tr><th>Name</th><th>Age</th><th>City</th></tr>
+  <tr><td>Anna</td><td>22</td><td>Kyiv</td></tr>
+  <tr><td>John</td><td>28</td><td>London</td></tr>
+</table>
+
+<script>
+  function openTab(evt, tabName) {
+    const tabContents = document.querySelectorAll('.tab-content');
+    const tabButtons = document.querySelectorAll('.tab-button');
+
+    tabContents.forEach(tc => tc.classList.remove('active'));
+    tabButtons.forEach(tb => tb.classList.remove('active'));
+
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
